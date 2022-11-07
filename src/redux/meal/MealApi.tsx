@@ -9,13 +9,9 @@ export const mealApi = createApi({
     getMealCategories: builder.query<MealCategories, void>({
       query: () => '/categories.php',
     }),
-    // getMealByCaegory: builder.query<MealsByCategoryT, void>({
-    //   query: () => '/rate',
-    // }),
     getMealByCaegory: builder.query<MealsByCategoryT, {c: string}>({
       query: arg => {
         const {c} = arg;
-        console.log('arg: ', c);
         return {
           url: '/filter.php?c=Pasta',
           params: {c},

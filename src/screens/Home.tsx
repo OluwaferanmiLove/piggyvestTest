@@ -33,14 +33,13 @@ import {revertAll} from '@redux/sharedAction';
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>({});
   const [meals, setMeals] = useState<Meal[] | null>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const {data: mealCategories, isLoading: getCategoriesLoading} =
     useGetMealCategoriesQuery();
-  const [getMealsByCat, {data: mealsByCat, isLoading: getMealsLoading}] =
-    useLazyGetMealByCaegoryQuery();
+  const [getMealsByCat, {data: mealsByCat}] = useLazyGetMealByCaegoryQuery();
 
   const cart = useSelector((state: RootState) => state.cart.order);
-  console.log('cart', cart);
 
   useEffect(() => {
     if (mealCategories) {
@@ -52,6 +51,7 @@ function Home() {
   useEffect(() => {
     if (mealsByCat) {
       setMeals(mealsByCat?.meals);
+      setLoading(false);
     }
   }, [mealsByCat]);
 
@@ -95,6 +95,7 @@ function Home() {
     };
 
     const selectCategory = () => {
+      setLoading(true);
       setSelectedCategory(item);
       getMealsByCat({c: item.strCategory});
     };
@@ -179,7 +180,7 @@ function Home() {
                 </BaseText>
               </TouchableOpacity>
             </View>
-            <LoadingContainer loading={getMealsLoading}>
+            <LoadingContainer loading={loading}>
               <View style={[styles.listContainer, {marginTop: hp(18)}]}>
                 <FlatList
                   data={meals}

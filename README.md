@@ -1,6 +1,6 @@
 # payourseTest
 
-<img src="./src/assets/image/screenShot1.png" width="100%" height="100%">  <img src="./src/assets/image/screenShot2.png" width="30%" height="30%">  <img src="./src/assets/image/screenShot3.png" width="30%" height="30%">
+<img src="./src/assets/image/screenShot1.png" width="30%" height="30%">  <img src="./src/assets/image/screenShot2.png" width="30%" height="30%">  <img src="./src/assets/image/screenShot3.png" width="30%" height="30%">
 ## Possible issue
 
   Ruby version mismatch error
@@ -10,8 +10,8 @@
 
 ## Clone git repository and install packages
 
-    git clone https://github.com/OluwaferanmiLove/payourseTest.git
-    cd payourseTest
+    git clone https://github.com/OluwaferanmiLove/piggyvestTest.git
+    cd piggyvestTest
 
 Then install npm packages with yarn
 

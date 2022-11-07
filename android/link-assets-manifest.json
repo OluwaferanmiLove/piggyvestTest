@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Graphik-Bold.otf",
+      "sha1": "641b95867ceac946733395b533d9ce0e02c1f131"
+    },
+    {
+      "path": "src/assets/fonts/Graphik-Medium.otf",
+      "sha1": "1d0e0a6bb4f76a9f55fd18f607e24fca4a2b569a"
+    },
+    {
+      "path": "src/assets/fonts/Graphik-Regular.otf",
+      "sha1": "27e4354c63c53eb441e6cd0946194d986b617c1e"
+    }
+  ]
+}

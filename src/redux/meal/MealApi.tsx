@@ -13,7 +13,7 @@ export const mealApi = createApi({
       query: arg => {
         const {c} = arg;
         return {
-          url: '/filter.php?c=Pasta',
+          url: '/filter.php',
           params: {c},
         };
       },
